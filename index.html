@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-stone-950 text-stone-200">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atheris Raid Assist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, nav a { font-family: 'Cinzel', serif; }
+    .swiper { width: 100%; height: 100%; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; }
+    nav { backdrop-filter: blur(12px); }
+    /* Light steel/iron accents */
+    .steel-accent { color: #ccc8c4; }
+    .steel-hover:hover { color: #ffffff; }
+    .steel-bg { background-color: #c5c5c5; }
+    .steel-bg-hover:hover { background-color: #ffffff; }
+    .steel-border { border-color: #e0e0e0; }
+    /* Subtle metallic relief */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(80,80,80,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(100,100,100,0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    section {
+      background: linear-gradient(to bottom, rgba(28,37,38,0.95), rgba(18,25,26,0.98));
+      transition: all 0.4s ease;
+    }
+    section:hover {
+      transform: scale(1.15) translateZ(0);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.7);
+      z-index: 10;
+    }
+    nav a {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ffffff;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Top Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/90 border-b steel-border border-opacity-40">
+    <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold tracking-tight steel-accent steel-hover transition-colors">
+        Atheris Raid Assist
+      </a>
+      <div class="flex items-center gap-8 text-base">
+        <a href="bot.html" class="steel-hover transition-colors font-medium">Discord Bot</a>
+        <a href="addon.html" class="steel-hover transition-colors font-medium">In-game Addon</a>
+        <a href="contact.html" class="steel-hover transition-colors font-medium">Contact</a>
+        <a href="support.html" class="steel-hover transition-colors font-medium">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero (tightened, single-line description) -->
+  <header class="relative pt-20 pb-8 text-center">
+    <div class="relative max-w-5xl mx-auto px-8">
+      <p class="text-base md:text-lg text-stone-400">
+        Raid organization tools for World of Warcraft Classic guilds — Discord bot for seamless signups and reserves • In-game addon for assignments and tactical maps.
+      </p>
+    </div>
+  </header>
+
+  <!-- YouTube Tutorial Button -->
+  <div class="text-center pb-10">
+    <a 
+      href="https://youtu.be/tPEZpgXdCD4" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="inline-block steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-semibold py-4 px-12 rounded-lg text-lg shadow-md hover:shadow-lg"
+    >
+      Watch YouTube Tutorial
+    </a>
+  </div>
+
+  <!-- Main Dual Sections (directly under button, no large gap) -->
+  <main class="flex-grow max-w-7xl mx-auto px-8 pb-12 grid md:grid-cols-2 gap-12 items-stretch">
+    
+    <!-- Discord Bot Section -->
+    <section class="rounded-2xl shadow-2xl p-8 steel-border border-opacity-30 flex flex-col">
+      <h2 class="text-3xl font-bold mb-6 steel-accent">Discord Bot</h2>
+      
+      <!-- Fixed-height Carousel -->
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create2.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create5.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create4.jpg" 
+              alt="Published Final Roster Embed"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create6.jpg" 
+              alt="Soft Reserve Autocomplete"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <ul class="space-y-4 text-base mb-8 flex-grow text-stone-300">
+        <li>• Admins create, close raids and finalize rosters, pull export strings and can add import strings.</li>
+        <li>• Soft reserves functionality: set limits per role and pull up items instantly with autocomplete.</li>
+        <li>• Signups are quick – just open the modal, choose your class/spec and status, and it's locked in right away.</li>
+        <li>• The embeds stay updated live, showing attendance, reserves, and the locked roster clearly.</li>
+        <li>• It ties in smoothly with the addon through easy import/export strings.</li>
+      </ul>
+      
+      <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+        <a href="https://discord.com/oauth2/authorize?client_id=1450805221734486109&permissions=2147600384&integration_type=0&scope=bot+applications.commands" class="flex-1 text-center steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-semibold py-3 rounded-lg text-sm shadow-md hover:shadow-lg">
+          Invite Bot
+        </a>
+        <a href="bot.html" class="flex-1 text-center border steel-border border-opacity-60 hover:bg-stone-800 transition-all duration-200 py-3 rounded-lg text-sm steel-accent">
+          Learn More →
+        </a>
+      </div>
+    </section>
+
+    <!-- In-game Addon Section -->
+    <section class="rounded-2xl shadow-2xl p-8 steel-border border-opacity-30 flex flex-col">
+      <h2 class="text-3xl font-bold mb-6 steel-accent">In-game Addon</h2>
+      
+      <!-- Fixed-height Carousel -->
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame10.jpg" 
+              alt="Live Raid Embed - Attend List + Buttons"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame17.jpg" 
+              alt="Signup Modal + Select Menus"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame7.jpg" 
+              alt="Published Final Roster Embed"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame1.jpg" 
+              alt="Soft Reserve Autocomplete"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      
+      <ul class="space-y-4 text-base mb-8 flex-grow text-stone-300">
+        <li>• Import, export or create raids. Add or import raiders. Add encounters and set assignments.</li>
+        <li>• Item tooltips show soft reserves live in game so you don't have to check outside lists and can distribute loot quickly.</li>
+        <li>• The map editor supports all classic raids, Vanilla through WotlK. Add raider markers or symbol markers for easy fight coordination.</li>
+        <li>• Encounter presets let you set up raids quickly and then broadcast them to all your group.</li>
+        <li>• Export raid strings and share them using the Discord bot for proper planning and coordination.</li>
+      </ul>
+      
+      <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+        <a href="https://wago.io/..." class="flex-1 text-center steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-semibold py-3 rounded-lg text-sm shadow-md hover:shadow-lg">
+          Download from Curseforge
+        </a>
+        <a href="addon.html" class="flex-1 text-center border steel-border border-opacity-60 hover:bg-stone-800 transition-all duration-200 py-3 rounded-lg text-sm steel-accent">
+          Learn More →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Support Section (static – no hover effect) -->
+  <section class="py-10 text-center border-y steel-border border-opacity-20">
+    <div class="max-w-4xl mx-auto px-8">
+      <p class="text-base mb-6 text-stone-300">
+        Atheris Raid Assist is completely free and ad-free.<br class="hidden md:block">
+        Your support helps cover ongoing development and hosting costs.
+      </p>
+      <a href="support.html" class="inline-block steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-medium py-3 px-8 rounded-lg text-base shadow-md hover:shadow-lg">
+        Support the Project
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-xs text-stone-500 border-t steel-border border-opacity-15">
+    <p>© 2026 Atheris Raid Assist. All rights reserved.<br>
+    World of Warcraft® and Blizzard Entertainment® are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.<br>
+    This project is not affiliated with or endorsed by Blizzard Entertainment.</p>
+  </footer>
+
+  <script>
+    // Initialize Swiper carousels
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        grabCursor: true,
+      });
+    });
+  </script>
+</body>
+</html>

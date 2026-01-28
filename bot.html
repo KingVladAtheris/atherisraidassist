@@ -1,0 +1,244 @@
+<!-- bot.html -->
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-stone-950 text-stone-200">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Bot | Atheris Raid Assist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, nav a { font-family: 'Cinzel', serif; }
+    .swiper { width: 100%; height: 100%; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; }
+    nav { backdrop-filter: blur(12px); }
+    /* Light steel/iron accents */
+    .steel-accent { color: #ccc8c4; }
+    .steel-hover:hover { color: #ffffff; }
+    .steel-bg { background-color: #c5c5c5; }
+    .steel-bg-hover:hover { background-color: #ffffff; }
+    .steel-border { border-color: #e0e0e0; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(80,80,80,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(100,100,100,0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    section { transition: all 0.4s ease; }
+    section:hover { transform: scale(1.00) translateZ(0); box-shadow: 0 24px 48px rgba(0,0,0,0.7); z-index: 10; }
+    nav a { position: relative; transition: color 0.3s ease; }
+    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #ffffff; transition: width 0.3s ease; }
+    nav a:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Top Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/90 border-b steel-border border-opacity-40">
+    <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold tracking-tight steel-accent steel-hover transition-colors">
+        Atheris Raid Assist
+      </a>
+      <div class="flex items-center gap-8 text-base">
+        <a href="bot.html" class="steel-hover transition-colors font-medium">Discord Bot</a>
+        <a href="addon.html" class="steel-hover transition-colors font-medium">In-game Addon</a>
+        <a href="contact.html" class="steel-hover transition-colors font-medium">Contact</a>
+        <a href="support.html" class="steel-hover transition-colors font-medium">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-20 max-w-5xl mx-auto px-8 py-12">
+    <h1 class="text-5xl font-bold mb-12 text-center steel-accent">Discord Bot</h1>
+    
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Raid Creation</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create1.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create2.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        <strong>Channel Admins / Raid Leaders:</strong> start with <code class="bg-stone-800 px-1.5 py-0.5 rounded">/raid create</code><br><br>
+
+        • Set raid name<br>
+        • Set <strong>exact slot numbers</strong> per role (tanks / healers / dps)<br>
+        • Optional: soft-reserve limits per role (default = 0)<br><br>
+
+        → Bot posts a <strong>live updating embed</strong> showing all signups in real time
+      </p>
+      
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Player Signups & Soft Reserves</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create3.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create4.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create5.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        Players click <strong>Manage Signup</strong> button:<br><br>
+
+        → Enter character name (<strong>must match in-game exactly</strong>)<br>
+        → Choose class + spec + status (attend / maybe / absent)<br><br>
+
+        If soft reserves are enabled:<br>
+        Use commands <code class="bg-stone-800 px-1.5 py-0.5 rounded">/softreserve add • list • remove • clear</code>
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Close Raid & Finalize Roster</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create6.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+         
+
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        When ready → click <strong>Close Raid</strong><br><br>
+
+        Then:<br>
+        • Click players to <strong>finalize each role</strong> (green = in roster, blue = not yet)<br>
+        • Click <strong>Confirm Roster</strong> when finished<br>
+        • You can <strong>re-open and change</strong> the roster later if needed
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Publish Raid</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create7.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create8.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="create9.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        After confirming roster → <strong>Publish Raid</strong> button appears.<br><br>
+
+        Useful actions:<br>
+        • <strong>Export Raid</strong> / <strong>Export Roster</strong> string → import into addon<br>
+        • <strong>Publish Raid</strong> → shows nice final summary embed for everyone<br>
+        • <strong>Upload Import String</strong> (.txt file) — final raid data from addon back to bot<br>
+        • After upload → <strong>Download Import String</strong> becomes available for all members
+      </p>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="https://discord.com/oauth2/authorize?..." class="inline-block steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-semibold py-4 px-12 rounded-lg text-lg shadow-md hover:shadow-lg">
+        Invite the Bot to Your Server
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer (same as index) -->
+  <footer class="py-6 text-center text-xs text-stone-500 border-t steel-border border-opacity-15 mt-auto">
+    <p>© 2026 Atheris Raid Assist. All rights reserved.<br>
+    World of Warcraft® and Blizzard Entertainment® are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.<br>
+    This project is not affiliated with or endorsed by Blizzard Entertainment.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        grabCursor: true,
+      });
+    });
+  </script>
+</body>
+</html>

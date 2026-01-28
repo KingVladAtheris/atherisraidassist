@@ -1,0 +1,323 @@
+<!-- addon.html -->
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-stone-950 text-stone-200">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In-game Addon | Atheris Raid Assist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <style>
+    /* Same styles as index/bot.html */
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, nav a { font-family: 'Cinzel', serif; }
+    .swiper { width: 100%; height: 100%; }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; border-radius: 0.75rem; }
+    nav { backdrop-filter: blur(12px); }
+    .steel-accent { color: #ccc8c4; }
+    .steel-hover:hover { color: #ffffff; }
+    .steel-bg { background-color: #c5c5c5; }
+    .steel-bg-hover:hover { background-color: #ffffff; }
+    .steel-border { border-color: #e0e0e0; }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 30% 30%, rgba(80,80,80,0.06) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(100,100,100,0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    section { transition: all 0.4s ease; }
+    section:hover { transform: scale(1.00) translateZ(0); box-shadow: 0 24px 48px rgba(0,0,0,0.7); z-index: 10; }
+    nav a { position: relative; transition: color 0.3s ease; }
+    nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background-color: #ffffff; transition: width 0.3s ease; }
+    nav a:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Top Navigation Bar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-950/90 border-b steel-border border-opacity-40">
+    <div class="max-w-7xl mx-auto px-8 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-3xl font-bold tracking-tight steel-accent steel-hover transition-colors">
+        Atheris Raid Assist
+      </a>
+      <div class="flex items-center gap-8 text-base">
+        <a href="bot.html" class="steel-hover transition-colors font-medium">Discord Bot</a>
+        <a href="addon.html" class="steel-hover transition-colors font-medium">In-game Addon</a>
+        <a href="contact.html" class="steel-hover transition-colors font-medium">Contact</a>
+        <a href="support.html" class="steel-hover transition-colors font-medium">Donate</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="pt-20 max-w-5xl mx-auto px-8 py-12">
+    <h1 class="text-5xl font-bold mb-12 text-center steel-accent">In-game Addon</h1>
+    
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Player Widget</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame15.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame16.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        <strong>Use <code class="bg-stone-800 px-1.5 py-0.5 rounded">/araw</code></strong> to open the personal widget.<br><br>
+
+        <strong>The selected raid = current data</strong> loaded in the addon<br>
+        (assignments • tactical maps • soft reserves)<br><br>
+
+        → Shows <strong>your personal assignment</strong> for the current boss<br>
+        → Big button to quickly open the <strong>tactical map</strong><br>
+        → <strong>Green border</strong> around your icon = easy to spot where to stand
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Raid Creation and Management</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame1.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame2.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame3.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame4.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        <strong>Use <code class="bg-stone-800 px-1.5 py-0.5 rounded">/ara</code></strong> to open the main raid management window<br><br>
+
+        You can:<br>
+        • <strong>Create</strong> a new raid<br>
+        • <strong>Import</strong> from string (most commonly from the Discord bot)<br>
+        • Add players <strong>manually</strong>, from current <strong>group/raid</strong>, or from import
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Encounter Management</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame5.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame6.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame7.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame8.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+          
+          <!-- Slide 5 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame9.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+          
+          <!-- Slide 6 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame10.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        <strong>Create new encounters</strong> or load presets from the dropdown.<br><br>
+
+        For each encounter you can:<br>
+        • Attach a <strong>tactical map</strong><br>
+        • Choose background image<br>
+        • Place <strong>raider markers</strong> and <strong>symbols</strong> to explain mechanics & assignments
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Spreadsheet Roster Planning</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame11.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame12.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        Full <strong>spreadsheet-style</strong> interface for fast roster management.<br><br>
+
+        • Slots are numbered and grouped by role<br>
+        • <strong>Click</strong> to assign / remove a raider from your roster<br>
+        • Makes swapping people <strong>very fast</strong> during raid preparation<br>
+        • Lets you keep the same assignments and reuse them with different rosters
+      </p>
+    </section>
+
+    
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 steel-accent">Soft Reserves, Export & Broadcast</h2>
+      <div class="swiper mb-8 aspect-video">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame17.jpg" 
+              alt="Live Raid Embed - Create"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame13.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide bg-stone-900 rounded-xl overflow-hidden">
+            <img 
+              src="ingame14.jpg" 
+              alt="Soft Reserve Limits Setup"
+              class="w-full h-full object-contain"
+            >
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <p class="text-lg text-stone-300 mb-6 leading-relaxed">
+        <strong>Soft reserves appear directly in item tooltips</strong> — no external lists needed.<br><br>
+
+        • <strong>Export</strong> entire raid to string (Ctrl+A → Ctrl+C)<br>
+        • <strong>Broadcast</strong> raid data to everyone in group/raid<br>
+         (requires them to have the addon installed)
+      </p>
+    </section>
+
+    <div class="text-center mt-12">
+      <a href="https://wago.io/..." class="inline-block steel-bg steel-bg-hover transition-all duration-200 text-stone-900 font-semibold py-4 px-12 rounded-lg text-lg shadow-md hover:shadow-lg">
+        Download from Curseforge
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-xs text-stone-500 border-t steel-border border-opacity-15 mt-auto">
+    <p>© 2026 Atheris Raid Assist. All rights reserved.<br>
+    World of Warcraft® and Blizzard Entertainment® are trademarks or registered trademarks of Blizzard Entertainment, Inc. in the U.S. and/or other countries.<br>
+    This project is not affiliated with or endorsed by Blizzard Entertainment.</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.swiper').forEach(swiperEl => {
+      new Swiper(swiperEl, {
+        loop: true,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        grabCursor: true,
+      });
+    });
+  </script>
+</body>
+</html>
